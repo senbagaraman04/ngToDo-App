@@ -14,14 +14,20 @@ export class AppComponent {
   submitToDo(inputString){
     console.log("Entered Input String");
     console.log(inputString)  
-    if(this.toDoContain.includes(inputString.toLowerCase()))    
+    if (inputString ==  undefined || inputString == empty)
     {
-      //this.returnMessage = " "; 
-      alert("Already Added");
-      inputString = null;
+      console.log("Empty");      
+    }  
+    else {
+      if(this.toDoContain.includes(inputString.toLowerCase())){
+        //this.returnMessage = " "; 
+    alert("Already Added");
+    inputString = empty; 
     }
-    else{
+    else 
+    {
     this.toDoContain.push(inputString);
+    }
     //this.returnMessage = "Your Input has been received"; 
     }
    
