@@ -6,9 +6,15 @@
   <input [(ngModel)] = "inputString" type="text" name="inputString" class="form-control" [value] = "inputString">
   <span class="input-group-text" (click)="submitToDo(inputString)">
     <i class="material-icons">add</i></span>
-
-
     <hr>
     <marquee>{{returnMessage}}</marquee>
+    <div class="List">
+        <ul>
+            <li *ngFor="let item of toDoContain">
+              {{item}}
+            </li>
+          </ul>
+    </div>
 </form>
+
 </div>
