@@ -1,5 +1,14 @@
 <div class="form-group">
 
   <h4>Todo App</h4>
+<form>
+  <div class="form-group"></div>
+  <input [(ngModel)] = "inputString" type="text" name="inputString" class="form-control" [value] = "inputString">
+  <span class="input-group-text" (click)="submitToDo(inputString)">
+    <i class="material-icons">add</i></span>
 
+
+    <hr>
+    <marquee>{{returnMessage}}</marquee>
+</form>
 </div>
