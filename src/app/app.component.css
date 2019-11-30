@@ -1,6 +1,7 @@
 body{
 	padding: 0;
 	margin: 0;
+
 }
 form{
 	max-width: 30em;
@@ -57,4 +58,11 @@ form .data li i{
   img.deleteIcon {
     position: absolute;
     right: 50px;
+=======
+    cursor: pointer;
+    
+}
+.form-control:focus{
+	box-shadow: 0;
+
 }

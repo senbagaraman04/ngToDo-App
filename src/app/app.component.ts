@@ -11,7 +11,9 @@ export class AppComponent {
   title = 'toDoApp';
   toDoContain = []; //Initialize an empty array 
   returnMessage = null;
-   submitToDo(inputString){
+
+  submitToDo(inputString){
+
     console.log("Entered Input String");
     console.log(inputString)  
     if (inputString ==  undefined || inputString == empty)
