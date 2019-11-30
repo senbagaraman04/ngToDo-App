@@ -45,9 +45,24 @@ form .data li i{
     position: absolute;
     right: 19px;
     top: 30px;
+    cursor: pointer;    
+}
+.form-control:focus{
+	box-shadow: 0;
+}
+
+.listOfItems:checked + .strike{
+    text-decoration: line-through;
+  }
+
+  img.deleteIcon {
+    position: absolute;
+    right: 50px;
+=======
     cursor: pointer;
     
 }
 .form-control:focus{
 	box-shadow: 0;
+
 }

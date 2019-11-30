@@ -11,7 +11,9 @@ export class AppComponent {
   title = 'toDoApp';
   toDoContain = []; //Initialize an empty array 
   returnMessage = null;
+
   submitToDo(inputString){
+
     console.log("Entered Input String");
     console.log(inputString)  
     if (inputString ==  undefined || inputString == empty)
@@ -32,4 +34,10 @@ export class AppComponent {
     }
    
   }
+
+  removeTask(removedItem){
+    console.log("Removed the data");
+    this.toDoContain.slice(this.toDoContain.indexOf(removedItem),1);
+  }
+
 }

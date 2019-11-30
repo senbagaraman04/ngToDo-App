@@ -9,6 +9,14 @@
     <hr>
     <marquee>{{returnMessage}}</marquee>
     <div class="List">
+
+        
+            <p *ngFor="let item of toDoContain">
+             <input type="checkbox" class="listOfItems" value="1">
+             <label for="list" class="strike">{{item}} </label> 
+             <img src="https://img.icons8.com/material/24/000000/delete-trash.png" (click) = "removeTask(item)" class="deleteIcon" alt="Delete Icon">
+            </p>
+          
         <ul>
             <li *ngFor="let item of toDoContain">
               {{item}}
