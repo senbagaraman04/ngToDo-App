@@ -3,25 +3,19 @@
   <h4>Todo App</h4>
 <form>
   <div class="form-group"></div>
-  <input [(ngModel)] = "inputString" type="text" name="inputString" class="form-control" [value] = [inputString]>
+  <input [(ngModel)] = "inputString" type="text" name="inputString" class="form-control" [value] = [inputString] (keyup.enter)=submitToDo(inputString)>
   <span class="input-group-text" (click)="submitToDo(inputString)">
     <i class="material-icons">add</i></span>
     <hr>
     <marquee>{{returnMessage}}</marquee>
     <div class="List">
-
         
             <p *ngFor="let item of toDoContain">
              <input type="checkbox" class="listOfItems" value="1">
              <label for="list" class="strike">{{item}} </label> 
-             <img src="https://img.icons8.com/material/24/000000/delete-trash.png" (click) = "removeTask(item)" class="deleteIcon" alt="Delete Icon">
+             <img src="https://img.icons8.com/material/24/000000/delete-trash.png" (click) = "removeTask($event.target,item)" class="deleteIcon" alt="Delete Icon">
             </p>
           
-        <ul>
-            <li *ngFor="let item of toDoContain">
-              {{item}}
-            </li>
-          </ul>
     </div>
 </form>
 
